@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import { Sinput } from '../styles';
 
 interface SearchProps {
   onChange: (text: string) => void;
@@ -8,17 +8,6 @@ interface SearchProps {
 interface SearchState {
   text: string;
 }
-
-const Sinput = styled.input`
-  margin-left: auto;
-  padding: 0.5rem 0.75rem;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: #f1f5f9;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  outline: none;
-  transition: box-shadow 0.2s, background-color 0.2s;
-`;
 
 class Search extends Component<SearchProps, SearchState> {
   constructor(props: SearchProps) {
